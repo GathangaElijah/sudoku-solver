@@ -8,6 +8,16 @@ import (
 func main() {
 	args := os.Args[1:]
 	board := parseInput(args)
+	if len(args) != 9 {
+		fmt.Println("Error: invalid input for sudoku ")
+		return
+	}
+	for _, arg := range args {
+		if len(arg) != 9 {
+			fmt.Println("Error : invalid sudoku input")
+			return
+		}
+	}
 
 	// printBoard(board)
 
